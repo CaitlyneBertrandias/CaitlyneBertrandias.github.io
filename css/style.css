@@ -1,0 +1,101 @@
+/* FONTS */
+/* alumni-sans-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alumni Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/alumni-sans-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* LAYOUT */
+body {
+    align-items: center;
+    background: #2f2d2e;
+    color: #666;
+    display: flex;
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 21px;
+    height: 100vh;
+    justify-content: flex-start;
+    line-height: 1;
+  }
+
+  header {
+    margin: 0 0 20vh 10vw;
+  }
+  
+  h1, h2 {
+    font-weight: 400;
+  }
+  
+  h1 {
+    color: #999;
+    font-size: 144px;
+  }
+  
+  h2 {
+    font-size: 68px;
+    margin-left: 5px;
+  }
+  h2 span {
+    color: #fab;
+  }
+  
+  p {
+    margin-left: 8px;
+  }
+  
+  span {
+    color: #b0b;
+  }
+  
+  /* RESPONSIVE */
+  @media screen and (max-width: 375px) {
+    h1 {
+      font-size: 110px;
+    }
+    
+    h2 {
+      font-size: 55px;
+      margin-left: 3px;
+    }
+  
+    p {
+      margin-left: 5px;
+    }
+  }
+  
+  @media screen and (min-width: 960px) {
+    header {
+      margin-left: 15vw;
+    }
+  
+    h1 {
+      font-size: 178px;
+    }
+    
+    h2 {
+      font-size: 89px;
+      margin-left: 6px;
+    }
+  
+    p {
+      margin-left: 11px;
+    }
+  }
+  
+  @media screen and (min-width: 1440px) {
+    h1 {
+      font-size: 322px;
+    }
+    
+    h2 {
+      font-size: 144px;
+      margin-left: 11px;
+    }
+  
+    p {
+      margin-left: 18px;
+    }
+  }
