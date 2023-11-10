@@ -99,3 +99,53 @@ body {
       margin-left: 18px;
     }
   }
+/* ANIMATIONS */
+/* basée sur https://css-tricks.com/snippets/css/typewriter-effect/ */
+.typewriter h2 {
+  font-family: monospace;
+  border-right: 4px solid #fb0; /* le curseur « machine à écrire » */
+  max-width: 0; /* au début, la largeur de mon h2 est à 0 */
+  overflow: hidden; /* tout ce qui dépasse n'est pas affiché */
+  white-space: nowrap; /* le contenu reste sur une seule ligne */
+
+  /* j'appelle animation */
+  /*
+  animation-name: typing;
+  animation-duration: 2.5s;
+  animation-timing-function: steps(9, end);
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  */
+  animation: typing 2.5s steps(9, end) 2s forwards;
+}
+
+/* je définis mes animations */
+/* effet lettre par lettre */
+@keyframes typing {
+  from { width: 0; max-width: 100%; }
+  to { width: 100%; max-width: 100%; }
+}
+
+/* effet curseur */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #fb0; }
+}
+
+/* https://animista.net/play/attention/blink */
+.typewriter p {
+  animation: 0.6s 6s forwards blink;
+  opacity: 0;
+}
+/* The text blinking effect */
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
